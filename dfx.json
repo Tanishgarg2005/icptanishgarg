@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "chitkara_backend": {
+      "main": "src/chitkara_backend/main.mo",
+      "type": "motoko"
+    },
+    "chitkara_frontend": {
+      "dependencies": [
+        "chitkara_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/chitkara_frontend/src/index.html"
+      },
+      "source": [
+        "src/chitkara_frontend/assets",
+        "dist/chitkara_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
